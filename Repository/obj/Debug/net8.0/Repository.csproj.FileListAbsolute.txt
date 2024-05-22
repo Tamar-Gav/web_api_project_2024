@@ -1,0 +1,17 @@
+M:\Web api\FirstProject\Repository\bin\Debug\net8.0\Repository.deps.json
+M:\Web api\FirstProject\Repository\bin\Debug\net8.0\Repository.dll
+M:\Web api\FirstProject\Repository\bin\Debug\net8.0\Repository.pdb
+M:\Web api\FirstProject\Repository\bin\Debug\net8.0\Entities.dll
+M:\Web api\FirstProject\Repository\bin\Debug\net8.0\Entities.pdb
+M:\Web api\FirstProject\Repository\obj\Debug\net8.0\Repository.csproj.AssemblyReference.cache
+M:\Web api\FirstProject\Repository\obj\Debug\net8.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
+M:\Web api\FirstProject\Repository\obj\Debug\net8.0\Repository.AssemblyInfoInputs.cache
+M:\Web api\FirstProject\Repository\obj\Debug\net8.0\Repository.AssemblyInfo.cs
+M:\Web api\FirstProject\Repository\obj\Debug\net8.0\Repository.csproj.CoreCompileInputs.cache
+M:\Web api\FirstProject\Repository\obj\Debug\net8.0\Repository.csproj.CopyComplete
+M:\Web api\FirstProject\Repository\obj\Debug\net8.0\Repository.dll
+M:\Web api\FirstProject\Repository\obj\Debug\net8.0\refint\Repository.dll
+M:\Web api\FirstProject\Repository\obj\Debug\net8.0\Repository.pdb
+M:\Web api\FirstProject\Repository\obj\Debug\net8.0\ref\Repository.dll
+M:\Web api\FirstProject\Repository\bin\Debug\net8.0\Repository.runtimeconfig.json
+M:\Web api\FirstProject\Repository\obj\Debug\net8.0\Repository.genruntimeconfig.cache
