@@ -2,7 +2,7 @@
 using DTOs;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
-using Service.order;
+using Service;
 using Service.user;
 
 namespace FirstProject.Controllers;
@@ -32,14 +32,20 @@ public class OrderController : ControllerBase
         return NotFound();
     }
     [HttpPost]
-    public async Task<ActionResult<Order>> AddOrder([FromBody] CreateOrderDTO orderDto)
+    public async Task<ActionResult<ReturnOrderDTO>> AddOrder([FromBody] CreateOrderDTO orderDto)
     {
         Order order = mapper.Map<CreateOrderDTO, Order>(orderDto);
-        Order newOrder = await _orderService.AddOrder(order);
-        if (newOrder != null)
-            return Ok(newOrder);
+        var newOrder = await _orderService.AddOrder(order);
+        var returnOrder = mapper.Map<Order, ReturnOrderDTO>(newOrder.Data);
+        if (newOrder.StatusCode == 200)
+            return Ok(returnOrder);
+        if (newOrder.StatusCode == 401)
+        {
+            return Unauthorized();
+        }
         return NotFound();
     }
+
 
 
 }

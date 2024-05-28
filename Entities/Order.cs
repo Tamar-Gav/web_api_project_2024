@@ -13,6 +13,7 @@ public partial class Order
     public short? OrderSum { get; set; }
 
     public short? UserId { get; set; }
+    
     public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
     public virtual User? User { get; set; }
 }

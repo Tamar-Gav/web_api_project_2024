@@ -19,7 +19,12 @@ public class Mapper : Profile
 
             CreateMap<Product, ProductDto>().ForMember(dest => dest.CategoryName,
             opts => opts.MapFrom(src => src.Category.CategoryName));
-        
+        CreateMap<Order, ReturnOrderDTO>()
+           .ForMember(dest => dest.OrderItemDTOs,
+            opts => opts.MapFrom(src => src.OrderItems))
+       .ForMember(dest => dest.OrderDate,
+          opts => opts.MapFrom(src => src.OrderDate));
     }
-    
 }
+    
+

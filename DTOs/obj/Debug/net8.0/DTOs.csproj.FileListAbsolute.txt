@@ -13,3 +13,19 @@ M:\Web api\FirstProject\DTOs\bin\Debug\net8.0\Entities.dll
 M:\Web api\FirstProject\DTOs\bin\Debug\net8.0\Entities.pdb
 M:\Web api\FirstProject\DTOs\obj\Debug\net8.0\DTOs.csproj.AssemblyReference.cache
 M:\Web api\FirstProject\DTOs\obj\Debug\net8.0\DTOs.csproj.CopyComplete
+C:\Users\326075108\Desktop\web_api_project_2024\DTOs\bin\Debug\net8.0\DTOs.deps.json
+C:\Users\326075108\Desktop\web_api_project_2024\DTOs\bin\Debug\net8.0\DTOs.dll
+C:\Users\326075108\Desktop\web_api_project_2024\DTOs\bin\Debug\net8.0\DTOs.pdb
+C:\Users\326075108\Desktop\web_api_project_2024\DTOs\bin\Debug\net8.0\Entities.dll
+C:\Users\326075108\Desktop\web_api_project_2024\DTOs\bin\Debug\net8.0\Entities.pdb
+C:\Users\326075108\Desktop\web_api_project_2024\DTOs\obj\Debug\net8.0\DTOs.csproj.AssemblyReference.cache
+C:\Users\326075108\Desktop\web_api_project_2024\DTOs\obj\Debug\net8.0\DTOs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\326075108\Desktop\web_api_project_2024\DTOs\obj\Debug\net8.0\DTOs.AssemblyInfoInputs.cache
+C:\Users\326075108\Desktop\web_api_project_2024\DTOs\obj\Debug\net8.0\DTOs.AssemblyInfo.cs
+C:\Users\326075108\Desktop\web_api_project_2024\DTOs\obj\Debug\net8.0\DTOs.csproj.CoreCompileInputs.cache
+C:\Users\326075108\Desktop\web_api_project_2024\DTOs\obj\Debug\net8.0\DTOs.sourcelink.json
+C:\Users\326075108\Desktop\web_api_project_2024\DTOs\obj\Debug\net8.0\DTOs.csproj.CopyComplete
+C:\Users\326075108\Desktop\web_api_project_2024\DTOs\obj\Debug\net8.0\DTOs.dll
+C:\Users\326075108\Desktop\web_api_project_2024\DTOs\obj\Debug\net8.0\refint\DTOs.dll
+C:\Users\326075108\Desktop\web_api_project_2024\DTOs\obj\Debug\net8.0\DTOs.pdb
+C:\Users\326075108\Desktop\web_api_project_2024\DTOs\obj\Debug\net8.0\ref\DTOs.dll

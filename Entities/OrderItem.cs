@@ -13,7 +13,7 @@ public partial class OrderItem
     public short? OrderId { get; set; }
 
     public short? Quantity { get; set; }
-    [JsonIgnore]
+    
     public virtual Order? Order { get; set; }
     
     public virtual Product? Prod { get; set; }

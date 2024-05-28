@@ -9,9 +9,11 @@ using Service.user;
 using Service.product;
 using Repository.category;
 using Service.category;
-using Service.order;
 using Repository.order;
 using NLog.Web;
+using Service;
+using FirstProject.middlewares;
+using PresidentsApp.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +30,9 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 
+builder.Services.AddScoped<IRatingService, RatingService>();
+builder.Services.AddScoped<IRatingRepository, RatingRepository>();
+
 builder.Services.AddDbContext<Product326075108Context>(option => option.UseSqlServer("Data Source=srv2\\PUPILS;Initial Catalog=Product_326075108;Trusted_Connection=True;TrustServerCertificate=True"));
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
@@ -38,6 +43,7 @@ builder.Host.UseNLog();
 
 var app = builder.Build();
 
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -46,6 +52,8 @@ if (app.Environment.IsDevelopment())
 }
 
 
+app.UseErrorHandlingMiddleware();
+//app.UseRatingMiddleware();
 
 // Configure the HTTP request pipeline.
 app.UseStaticFiles();

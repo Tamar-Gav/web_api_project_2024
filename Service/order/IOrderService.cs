@@ -1,10 +1,10 @@
 ﻿using Entities;
 
-namespace Service.order
+namespace Service
 {
     public interface IOrderService
     {
-        Task<Order> AddOrder(Order order);
+        Task<CustomHttpResponse<Order>> AddOrder(Order order);
         Task<IEnumerable<Order>> GetOrders();
     }
 }
