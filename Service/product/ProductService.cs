@@ -21,7 +21,7 @@ public class ProductService : IProductService
     {
        
         var stringCategories = categoriesIds?.Split(" ");
-        if (stringCategories?.Length > 0) { 
+        if (stringCategories?.Length > 0 && categoriesIds!="") { 
         var categories=new int?[stringCategories.Length];
         int i = 0;
 

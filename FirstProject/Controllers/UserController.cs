@@ -54,7 +54,6 @@ public class UserController : ControllerBase
     {
         User loginUser = await _userService.Login(user.Email, user.Password);
         _logger.LogInformation($"Login attempted with User Name,{user.Email} and password{user.Password} ");
-        _logger.LogError($"Login attempted with User Name,{user.Email} and password{user.Password} ");
 
         if (loginUser != null)
             return Accepted(loginUser);

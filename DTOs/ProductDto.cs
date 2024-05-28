@@ -4,17 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.product
+namespace Entities.product;
+
+public class ProductDto
 {
-    public class ProductDto
-    {
-        public short ProdId { get; set; }
-        public string? ProdName { get; set; }
+    public short ProdId { get; set; }
+    public string? ProdName { get; set; }
 
-        public short? Price { get; set; }
+    public short? Price { get; set; }
 
-        public string? CategoryName { get; set; }
+    public string? CategoryName { get; set; }
 
-        public string? Description { get; set; }
-    }
+    public string? Description { get; set; }
 }

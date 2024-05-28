@@ -32,11 +32,11 @@ public class OrderController : ControllerBase
         return NotFound();
     }
     [HttpPost]
-    public async Task<ActionResult<ReturnOrderDTO>> AddOrder([FromBody] CreateOrderDTO orderDto)
+    public async Task<ActionResult<CreateOrderDTO>> AddOrder([FromBody] CreateOrderDTO orderDto)
     {
         Order order = mapper.Map<CreateOrderDTO, Order>(orderDto);
         var newOrder = await _orderService.AddOrder(order);
-        var returnOrder = mapper.Map<Order, ReturnOrderDTO>(newOrder.Data);
+        var returnOrder = mapper.Map<Order, CreateOrderDTO>(newOrder.Data);
         if (newOrder.StatusCode == 200)
             return Ok(returnOrder);
         if (newOrder.StatusCode == 401)

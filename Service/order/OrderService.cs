@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using Repository;
 using Repository.order;
 using Repository.product;
+using Service.product;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,23 +16,23 @@ namespace Service;
 public class OrderService : IOrderService
 {
     ILogger<OrderService> _logger;
-    IOrderRepository orderRepository;
-    IProductRepository _prepository;
-    public OrderService(IOrderRepository orderRepository, ILogger<OrderService> logger, IProductRepository pr)
+    IOrderRepository _orderRepository;
+    IProductService _productService;
+    public OrderService(IProductService productService, ILogger<OrderService> logger, IOrderRepository orderRepository)
     {
         _logger = logger;
-        this.orderRepository = orderRepository;
-        _prepository = pr;
+        _orderRepository = orderRepository;
+        _productService = productService;
     }
     public async Task<IEnumerable<Order>> GetOrders()
     {
-        return await orderRepository.Get();
+        return await _orderRepository.Get();
     }
     public async Task<CustomHttpResponse<Order>> AddOrder(Order order)
     {
-        var products = _prepository.Get(0, 1000, "", "", []);
+        var products = _productService.GetProducts(0, 1000, "", "", "");
         List<Product> productList = (List<Product>)await products;
-        decimal totalSum = (decimal)order.OrderItems
+        var totalSum = order.OrderItems
                 .Where(oi => productList.Any(p => p.ProdId == oi.ProdId))
                 .Sum(oi => productList.First(p => p.ProdId == oi.ProdId).Price * oi.Quantity);
 
@@ -47,7 +48,7 @@ public class OrderService : IOrderService
         }
         else
         {
-            Order result = await orderRepository.AddOrder(order);
+            Order result = await _orderRepository.AddOrder(order);
             return result != null ? new CustomHttpResponse<Order>(result, 200) : new CustomHttpResponse<Order>(null, 401);
         }
     }
