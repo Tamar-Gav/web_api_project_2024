@@ -33,7 +33,7 @@ const showOrders = (products) => {
         tbody.appendChild(newRow);
     });
 }
-const deleteProd = (product) => {
+const deleteProd = async (product) => {
     let products = JSON.parse(localStorage.getItem(`basket_for_user_${userId}`))
     for (var i = 0; i < products.length; i++) {
         if (products[i].prodId == product.prodId) {
@@ -42,7 +42,7 @@ const deleteProd = (product) => {
         }
     }
 
-    localStorage.setItem(`basket_for_user_${userId}`, JSON.stringify(products))
+  await  localStorage.setItem(`basket_for_user_${userId}`, JSON.stringify(products))
     loadBasket()
 }
 
@@ -95,7 +95,7 @@ const placeOrder = async () => {
         return
     }
     let products = JSON.parse(localStorage.getItem(`basket_for_user_${userId}`))
-    if (products == []) {
+    if (products.length==0) {
         alert("😍🤣😂😘עדיין לא הזמנת מוצרים😍🤣😂😘")
         return
     }
