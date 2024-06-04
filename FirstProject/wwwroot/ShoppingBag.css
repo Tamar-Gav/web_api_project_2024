@@ -21,7 +21,7 @@ p {
 }
 
 a {
-    color: #007bff;
+    color: #40E0D0; /* Turquoise color */
     text-decoration: none;
 }
 
@@ -50,22 +50,35 @@ th, td {
 
 .image {
     width: 100px; /* Increase the image width by 10 pixels */
-    
     object-fit: cover;
 }
 
 button {
     padding: 5px 10px;
-    background-color: #007bff;
+    background-color: lightcoral; /* Light Coral background */
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 8px; /* Increasing border radius */
 }
 
     button:hover {
-        background-color: #0056b3;
+        background-color: lightpink; /* Light Pink on hover */
     }
 
-.ClearBoth {
-    clear: both;
+/* General Button Styles */
+.button-style {
+    background-color: lightcoral; /* Light Coral background */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px; /* Padding for the buttons */
+    text-decoration: none; /* Remove underline */
+    border-radius: 8px; /* Rounded corners */
+    display: inline-block; /* Make the link behave like a button */
+    margin: 5px 0; /* Margin for spacing */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
+
+    .button-style:hover {
+        background-color: lightpink; /* Light Pink on hover */
+        color: #ffffff; /* Ensure white text color on hover as well */
+    }
