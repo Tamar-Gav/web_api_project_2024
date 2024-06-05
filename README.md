@@ -14,6 +14,6 @@
 - Added a testing project including Unit Tests and Integration Tests.
 ## Installation `bash git clone https://github.com/user/MyProject.git cd MyProject dotnet restore `
 ## Running the Project `bash dotnet run ` ## Testing `bash dotnet test ` 
-## Using Swagger After running the project, you can access Swagger for API documentation and testing at: ` http://localhost:{PORT}/swagger ``` 
+## Using Swagger After running the project, you can access Swagger for API documentation and testing at: ` http://localhost:5133/swagger/index.html` 
 ## Contributing This project is open for contributions. You can submit Pull Requests and open Issues on the GitHub page. 
 ## License This project is protected under copyright laws according to the attached license. Find more information in the LICENSE file.
