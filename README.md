@@ -1,1 +1,19 @@
-markdown # DotNet 7 Core REST API Project ## Overview This project is built using DotNet 7 Core and follows REST architectural principles. The goal was to create a scalable, secure, and maintainable API. ## Project Structure The project is structured into three layers: - API Layer: Handles HTTP requests and responses. - Service Layer: Implements business logic. - Data Layer: Manages data access using Entity Framework (EF) with Database First approach. ## Key Features - Validation: Input validations are strictly enforced. - Password Strength: Passwords are validated using the zxcvbn package. - Dependency Injection (DI): Used to maintain encapsulation and promote scalability. - Asynchronous Programming: All functions use async and await to support non-blocking operations. - Configuration: Configurations are managed using configuration files to handle environment-specific settings. - Error Handling: Errors are appropriately captured, logged, and in the event of an issue, an email notification is sent. - Swagger Documentation: All API endpoints are documented using Swagger. - HTTPS Support: The project uses HTTPS for secure communication. - DTO Layer: Data Transfer Objects (DTOs) are used for data representation. - Automapper: Used for converting between DTOs and entities. - Product Pricing: Pricing information is fetched directly from the database. - Traffic Monitoring: All API traffic is logged in the rating table for analysis. ## Installation 1. Clone the repository: `sh git clone https://github.com/YourUsername/YourRepository.git cd YourRepository ` 2. Set up the database: - This project uses Entity Framework with Database First approach. Make sure your database is up and running. - Update the connection string in the configuration file. 3. Run the project: `sh dotnet run ` ## Testing Unit and integration tests are included in the project. You can run the tests using the following command: `sh dotnet test ` ## Data Population Data population for development purposes can be done using the data population project found at: webApi_manager ## Contributions Contributions are welcome. Please open an issue or submit a pull request for review. ## License This project is licensed under the MIT License. ## Contact For more information, contact [Your Contact Information].
+# MyProject 
+## Project Description: This project is developed using .NET 7 Core and includes a REST API interface. The goal is to provide secure and well-monitored APIs for data management. 
+## Key Features - Developed using .NET 7 Core and REST API technologies.
+- Stringent validations using the zxcvbn library for password strength.
+- The project is divided into three layers (Layers) that use DI (Dependency Injection) to maintain encapsulation.
+- Uses Entity Framework ORM with DB First approach. Code First can be run.
+- Extensive use of async and await for every function to ensure scalability.
+- Data insertion was done in a separate project: webApi_manager. - Documented using Swagger.
+- DTO layer to maintain data integrity. - Conversions are done using AutoMapper.
+- Configuration files are used to handle environment-specific settings.
+- Proper error handling: Server-side errors are caught, emails are sent, and they are logged in a separate file.
+- Traffic is monitored in a rating table to analyze the service. - Uses HTTPS protocol for all communications.
+- Product prices are retrieved directly from the DB.
+- Added a testing project including Unit Tests and Integration Tests.
+## Installation `bash git clone https://github.com/user/MyProject.git cd MyProject dotnet restore `
+## Running the Project `bash dotnet run ` ## Testing `bash dotnet test ` 
+## Using Swagger After running the project, you can access Swagger for API documentation and testing at: ` http://localhost:{PORT}/swagger ``` 
+## Contributing This project is open for contributions. You can submit Pull Requests and open Issues on the GitHub page. 
+## License This project is protected under copyright laws according to the attached license. Find more information in the LICENSE file.
